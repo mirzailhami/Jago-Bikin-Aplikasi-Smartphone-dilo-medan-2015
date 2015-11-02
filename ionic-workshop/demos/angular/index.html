@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+  <link href="../../ionic/css/ionic.css" rel="stylesheet">
+  <script src="../../ionic/js/ionic.bundle.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body ng-controller="MyCtrl">
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Using Angular with Ionic</h1>
+  </ion-header-bar>
+
+  <ion-content class="has-header padding">
+    <p ng-if="data.firstName">
+      Hi <b>{{data.firstName}}</b>, welcome to onCoding Academy.
+    </p>
+    <label class="item item-input">
+      <input ng-model="data.firstName" type="text" placeholder="First Name">
+    </label>
+    <label class="item item-input">
+      <input ng-model="data.lastName" type="text" placeholder="Last Name">
+    </label>
+    
+    <button ng-disabled="data.firstName=='' || data.lastName==''" ng-click="simpanData()" class="button button-block button-positive">Submit</button>
+    <p ng-bind-html="tmp"></p>
+  </ion-content> 
+</ion-view>
+</body>
+</html>

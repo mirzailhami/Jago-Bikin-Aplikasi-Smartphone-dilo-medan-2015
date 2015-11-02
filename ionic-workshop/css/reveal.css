@@ -1116,8 +1116,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #3374de;
-  background-color: #3374de; }
+  background: #4d84e0;
+  background-color: #4d84e0; }
 
 .reveal {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -1415,7 +1415,7 @@ body {
     padding: 5px 6px 7px 12px; }
 .reveal .ionic-blue, .reveal .ionic-blue * {
   text-shadow: none;
-  color: #3374de; }
+  color: #4d84e0; }
 .reveal .col {
   float: left;
   width: 50%; }

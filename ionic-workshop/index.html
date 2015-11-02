@@ -41,13 +41,11 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 
-
-
         <section data-background="img/superpower.jpg" style="">
-          <h4 style="margin-top: 300px;">Workshop</h4>          
+          <h4 style="margin-top: 300px;">Ionic Workshop</h4>          
           <h1 class="dark-shadow">Jago Bikin <br>Aplikasi Smartphone</h1>
-          <a href="http://oncoding.net"><img src="img/oncoding.png" width="200"></a>
-          <p><small>Mikroskil, 30 Mei 2015</small></p>
+          <a href="http://oncoding.net"><img src="img/logo.png" width="200"></a>
+          <p style="color: #ccc;"><small>Digital Lounge, Medan<br>October 31, 2015</small></p>
         </section>
 
 
@@ -62,15 +60,87 @@
           <ul class="me dark-shadow">
             <li style="background:url(img/marker.png) no-repeat 0 8px;">Medan, Indonesia</li>
             <li style="background:url(img/twitter.png) no-repeat 0 16px;">
-              <a href="https://twitter.com/adamdbradley" target="_blank" style="text-decoration:none">@mirzailhami</a>
+              <a href="https://twitter.com/mirzailhami" target="_blank" style="text-decoration:none">@mirzailhami</a>
             </li>
             <li style="background:url(img/github.png) no-repeat 0 17px;">
-              <a href="https://github.com/adamdbradley" target="_blank" style="text-decoration:none">
+              <a href="https://github.com/mirzailhami" target="_blank" style="text-decoration:none">
                 mirzailhami</a>
               </li>
           </ul>
         </section>
 
+        <section>
+          <h1>Overview</h1>
+          <ol>
+            <li>Native vs Hybrid Apps</li>
+            <li>Intro Ionic</li>
+            <li>UI Components</li>
+            <li>Ionic CLI</li>
+            <li>Demos</li>
+          </ol>
+        </section>
+
+        <section>
+          <h1>The Downsides of Native</h1>
+          <ul>
+            <li>Proficiency in each platform required</li>
+            <li>Entirely separate code bases</li>
+            <li>Timely &amp; expensive development</li>
+            <li>Diminishing returns</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>More Platforms. More Problems.</h3>
+          <p style="margin-top: 60px">
+            <img src="img/apple.png" class="logo" width="200" height="200" style="margin-right: 10px">
+            <img src="img/android.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+            <img src="img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+            <img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">
+          </p>
+          <p><span class="light-text">
+            Why are we still coding for multiple platforms?
+          </span></p>
+        </section>
+
+        <section>
+          <blockquote>
+            “Is there an alternative?”
+          </blockquote>
+        </section>
+
+        <section>
+          <img src="img/cordova.png" class="logo" style="margin-bottom: 0;">
+          <ul>
+            <li>Hybrid Apps: HTML5 that acts like native</li>
+            <li>Phonegap renamed to Cordova</li>
+            <li>Web wrapped in native layer</li>
+            <li>Direct access to native APIs</li>
+            <li>Familiar web dev environment</li>
+            <li>Develop a single code base (web platform)</li>
+          </ul>
+        </section>
+
+        <section>
+          <blockquote>
+            “Oh No! The Zuck has spoken!”
+          </blockquote>
+          <img src="img/tech-crunch.png">
+          <p style="font-size:10px">
+            http://techcrunch.com/2012/09/11/mark-zuckerberg-our-biggest-mistake-with-mobile-was-betting-too-much-on-html5/
+          </p>
+        </section>
+
+        <section style="top: -289px; display: block; background: url(http://ionicframework.com/present-ionic/slides/img/fb.png) no-repeat;">
+          <h2 style="margin-left: 150px;">Are You Building the Facebook app?</h2>
+          <ul>
+            <li>Have a multi-million dollar budget?</li>
+            <li>Have a large team of experienced native developers?</li>
+            <li>Does your billion-dollar revenue depend on this app?</li>
+            <li>If so...do native</li>
+            <li class="fragment" data-fragment-index="0">...but today it's not so black and white
+          </li></ul>
+        </section>
 
         <section>
           <h3 style="font-size: 80px">Hybrid Apps!</h3>
@@ -115,6 +185,12 @@
               <td>iPhone 6</td>
               <td>1.4 GHz dual-core</td>
               <td>1 GB</td>
+            </tr>
+            <tr>
+              <td>2015</td>
+              <td>iPhone 6s</td>
+              <td>1.8 GHz dual-core</td>
+              <td>2 GB</td>
             </tr>
           </table>
         </section>
@@ -224,6 +300,63 @@
           </ul>
         </section>
 
+        <section>
+          <div class="col preview demo-frame">
+            <iframe src="demos/angular/index.html"></iframe>
+          </div>
+          <div class="col code">
+            <h3>Fully Angular</h3>
+            <ul style="margin-left: 70px">
+              <li>AngularJS</li>
+              <li>$scope</li>
+              <li>ng-controller</li>
+              <li>ng-if</li>
+            </ul>
+            <pre><code data-trim contenteditable class="xml"
+                <ion-pane ng-app="app">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Using Angular with Ionic</h1>
+  </ion-header-bar>
+
+  <ion-content ng-controller="AppCtrl" class="padding">
+    <h3 ng-if="data.firstName">
+      Hai {{data.firstName}}, have a nice day.
+    </h3>
+    <label class="item item-input">
+      <input ng-model="data.firstName" type="text" placeholder="First Name">
+    </label>
+    <label class="item item-input">
+      <input ng-model="data.lastName" type="text" placeholder="Last Name">
+    </label>
+    
+    <button ng-disabled="data.firstName=='' || data.lastName==''" ng-click="simpanData()" class="button button-block button-positive">Submit</button>
+    <p ng-bind-html="tmp"></p>
+  </ion-content>  
+</ion-pane></code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="col preview demo-frame">
+            <iframe src="demos/list/index.html"></iframe>
+          </div>
+          <div class="col code">
+            <h3>Complex Lists</h3>
+            <ul style="margin-left: 70px">
+              <li>AngularJS Directive</li>
+              <li>Buttons exposed by swiping</li>
+              <li>Reorder</li>
+              <li>Delete</li>
+            </ul>
+            <pre><code data-trim contenteditable class="xml"
+                <ion-list>
+                  <ion-item ng-repeat="item in items" item="item">
+  List Item {{ item.id }}
+</ion-item>
+                </ion-list></code></pre>
+          </div>
+        </section>
+
 
         <section>
           <div class="col preview demo-frame">
@@ -239,7 +372,7 @@
               <li>Smooth scrolling!</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<div class="list">
+              <div class="list">
   <div collection-repeat="c in contacts">
     <h2>{{ c.name }}</h2>
     <p>{{ c.email }}</p>
@@ -467,10 +600,11 @@
         <section>
           <h2><code style="font-size: 80px">&lt;/html&gt;</code></h2>
           <h3 style="text-transform:none; font-size: 46px">
-            <a style="text-decoration:none;" href="https://twitter.com/adamdbradley" target="_blank">@mirzailhami</a>
+            <a style="text-decoration:none;" href="https://twitter.com/mirzailhami" target="_blank">@mirzailhami</a><br>
+            <a style="text-decoration:none;" href="https://mirzailhami.com" target="_blank">mirzailhami.com</a>
           </h3>
           <h4 style="text-transform:none;font-size:36px;margin-top:50px;">
-            <a style="text-decoration:none;" href="http://mirzailhami.github.io/ionic-workshop/#/">http://mirzailhami.github.io/ionic-workshop</a>
+            <a style="text-decoration:none;" href="http://mirzailhami.github.io/ionic-workshop-dilo/#/">http://mirzailhami.github.io/ionic-workshop-dilo</a>
           </h4>
         </section>
 
